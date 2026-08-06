@@ -1,246 +1,185 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Malik Azan Waheed Portfolio</title>
-
-```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik Azan Waheed — Electrical &amp; ML Engineer</title>
+<meta name="description" content="Portfolio of Malik Azan Waheed, Electrical &amp; Machine Learning Engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-```
-
 </head>
-
 <body>
 
-<!-- HERO / PROFILE SECTION -->
+<!-- scroll progress rail (desktop) -->
+<nav class="rail" aria-hidden="true">
+  <div class="rail-line"><div class="rail-fill" id="railFill"></div></div>
+  <ol class="rail-nodes">
+    <li data-target="hero"><span></span></li>
+    <li data-target="courses"><span></span></li>
+    <li data-target="projects"><span></span></li>
+    <li data-target="certificates"><span></span></li>
+    <li data-target="contact"><span></span></li>
+  </ol>
+</nav>
 
-<section class="hero">
+<!-- mobile progress bar -->
+<div class="progress-bar" aria-hidden="true"><div id="progressFill"></div></div>
 
-```
-<img src="profile.png" class="profile-pic">
+<!-- HERO -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="scope-frame">
+      <img src="profile.png" alt="Portrait of Malik Azan Waheed" class="profile-pic">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
+      <span class="scanline"></span>
+    </div>
 
-<h1 class="slide-in">
-    Malik Azan Waheed
-</h1>
+    <p class="datasheet-line">MODEL&nbsp;NO. MAW‑01&nbsp;&nbsp;·&nbsp;&nbsp;STATUS <span class="status-dot"></span>ACTIVE</p>
+    <h1 class="name">Malik Azan <span class="cursor">Waheed</span></h1>
+    <p class="subtitle">Electrical Engineer&ensp;/&ensp;Machine Learning &amp; Applied AI</p>
+    <p class="hero-desc">I build at the point where circuits meet models — from logic-level hardware to
+      LLM-powered applications. This page traces that signal path, start to finish.</p>
 
-<p class="subtitle">
-    Electrical & Machine Learning Engineer
-</p>
-```
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View builds</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</header>
 
+<main>
+
+<!-- COURSES / TRAINING -->
+<section class="section" id="courses">
+  <p class="eyebrow">// 01&ensp;SIGNAL INPUT — CORE TRAINING</p>
+  <h2>What went into the design</h2>
+
+  <div class="grid courses-grid">
+    <article class="card">
+      <div class="card-media"><img src="dld.png" alt="Digital logic schematic in Proteus"></div>
+      <h3>Digital Logic Design</h3>
+      <p>Logic gates, flip-flops, and combinational &amp; sequential circuits — the groundwork for
+        every digital system built after it.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-media"><img src="mps.png" alt="Microprocessor schematic in Proteus"></div>
+      <h3>Microprocessor Systems</h3>
+      <p>Assembly programming, interrupts, and memory interfacing on real microcontroller
+        architecture.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-media"><img src="ml.png" alt="Machine learning concept illustration"></div>
+      <h3>Machine Learning</h3>
+      <p>Supervised &amp; unsupervised learning, model training, and the data preprocessing that
+        makes models trustworthy.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-media"><img src="langchain.png" alt="Agentic AI application illustration"></div>
+      <h3>LangChain &amp; Agentic AI</h3>
+      <p>Building LLM-powered applications — prompt engineering, retrieval, and document-grounded
+        chatbots.</p>
+    </article>
+  </div>
 </section>
 
-<!-- COURSES SECTION -->
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <p class="eyebrow">// 02&ensp;OUTPUT STAGE — BUILDS</p>
+  <h2>Things I've shipped</h2>
 
-<section class="section">
+  <div class="grid projects-grid">
+    <article class="card project-card">
+      <span class="tag">LangChain · Python</span>
+      <h3>Currency Converter</h3>
+      <p>AI-powered currency converter built with LangChain and the HuggingFace API.</p>
+      <a href="https://github.com/azan823/currency-converter" target="_blank" rel="noopener">Open repository →</a>
+    </article>
 
-```
-<h2>Major Courses Studied</h2>
+    <article class="card project-card">
+      <span class="tag">RAG · LLM</span>
+      <h3>Multi-Document Research Assistant</h3>
+      <p>RAG-based chatbot that answers questions grounded in multiple source documents.</p>
+      <a href="https://github.com/azan823/research-assistant" target="_blank" rel="noopener">Open repository →</a>
+    </article>
 
-<div class="courses">
+    <article class="card project-card">
+      <span class="tag">C++</span>
+      <h3>Store Management System</h3>
+      <p>Console-based inventory system with user authentication and product management.</p>
+      <a href="https://github.com/azan823/store-management-system" target="_blank" rel="noopener">Open repository →</a>
+    </article>
 
-    <div class="course">
-        <img src="dld.png">
-        <h3>Digital Logic Design (DLD)</h3>
-        <p>
-            Studied logic gates, flip-flops, combinational and sequential circuits,
-            and digital system design.
-        </p>
-    </div>
-
-    <div class="course">
-        <img src="mps.png">
-        <h3>Microprocessor Systems (MPS)</h3>
-        <p>
-            Learned assembly programming, interrupts, memory interfacing,
-            and microprocessor architecture.
-        </p>
-    </div>
-
-    <div class="course">
-        <img src="ml.png">
-        <h3>Machine Learning</h3>
-        <p>
-            Studied supervised and unsupervised learning,
-            model training, and data preprocessing.
-        </p>
-    </div>
-
-    <div class="course">
-        <img src="langchain.png">
-        <h3>LangChain</h3>
-        <p>
-            Built AI applications using LLMs,
-            prompt engineering, and document-based chatbots.
-        </p>
-    </div>
-
-</div>
-```
-
+    <article class="card project-card">
+      <span class="tag">Arduino · Sensors</span>
+      <h3>Footstep Detection Security Mat</h3>
+      <p>Arduino-based intrusion detection using piezoelectric footstep sensors.</p>
+      <a href="https://github.com/azan823/security-mat" target="_blank" rel="noopener">Open repository →</a>
+    </article>
+  </div>
 </section>
 
-<!-- PROJECTS SECTION -->
+<!-- CERTIFICATES -->
+<section class="section" id="certificates">
+  <p class="eyebrow">// 03&ensp;VALIDATION — VERIFIED</p>
+  <h2>Certificates</h2>
 
-<section class="section">
+  <div class="grid certs-grid">
+    <article class="card cert-card">
+      <div class="card-media cert-media"><img src="cert_1.png" alt="No Code AI Build-A-Thon participation certificate"></div>
+      <h3>No Code AI Build‑A‑Thon</h3>
+      <p>Participant — Google Developers Group on Campus, NUST. March 2026.</p>
+    </article>
 
-```
-<h2>My Projects</h2>
+    <article class="card cert-card">
+      <div class="card-media cert-media"><img src="cert_2.png" alt="Generative AI Application Developer certificate"></div>
+      <h3>Generative AI Application Developer</h3>
+      <p>NCEAC–HEC Generative AI Training, in collaboration with UETIANS Lahore Endowment
+        Foundation. Oct–Dec 2025.</p>
+    </article>
 
-<div class="projects">
-
-    <div class="project">
-        <h3>Currency Converter (LangChain)</h3>
-
-        <p>
-            AI-powered currency converter using LangChain and HuggingFace API.
-        </p>
-
-        <a href="https://github.com/azan823/currency-converter"
-           target="_blank">
-           Open GitHub Repository
-        </a>
-    </div>
-
-
-
-    <div class="project">
-        <h3>Multi-Document Research Assistant</h3>
-
-        <p>
-            RAG-based chatbot for answering questions from multiple documents.
-        </p>
-
-        <a href="https://github.com/azan823/research-assistant"
-           target="_blank">
-           Open GitHub Repository
-        </a>
-    </div>
-
-
-
-    <div class="project">
-        <h3>Store Management System (C++)</h3>
-
-        <p>
-            Console-based system with authentication and product management.
-        </p>
-
-        <a href="https://github.com/azan823/store-management-system"
-           target="_blank">
-           Open GitHub Repository
-        </a>
-    </div>
-
-
-
-    <div class="project">
-        <h3>Footstep Detection Security Mat</h3>
-
-        <p>
-            Arduino-based system using piezoelectric sensors
-            for intrusion detection.
-        </p>
-
-        <a href="https://github.com/azan823/security-mat"
-           target="_blank">
-           Open GitHub Repository
-        </a>
-    </div>
-
-</div>
-```
-
+    <article class="card cert-card">
+      <div class="card-media cert-media"><img src="cert_3.png" alt="Agentic AI workshop participation certificate"></div>
+      <h3>Agentic AI: From Idea to Deployment</h3>
+      <p>Workshop participant — Peer Bridge.</p>
+    </article>
+  </div>
 </section>
 
-<!-- CERTIFICATES SECTION -->
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <p class="eyebrow">// 04&ensp;I/O — GET IN TOUCH</p>
+  <h2>Let's connect</h2>
+  <p class="hero-desc">Open to opportunities in electrical engineering, machine learning, and applied
+    AI development.</p>
 
-<section class="section">
-
-```
-<h2>My Certificates</h2>
-
-<div class="certificates">
-
-    <div class="certificate">
-
-        <img src="cert_1.png">
-
-        <h3>Machine Learning Certificate</h3>
-
-        <p>
-            Completed training in machine learning algorithms,
-            model development, and evaluation.
-        </p>
-
-    </div>
-
-
-
-    <div class="certificate">
-
-        <img src="cert_2.png">
-
-        <h3>Deep Learning Certificate</h3>
-
-        <p>
-            Studied neural networks, CNNs,
-            and deep learning frameworks.
-        </p>
-
-    </div>
-
-
-
-    <div class="certificate">
-
-        <img src="cert_3.png">
-
-        <h3>Programming Certificate</h3>
-
-        <p>
-            Learned programming fundamentals,
-            data structures, and problem solving.
-        </p>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- CONTACT SECTION -->
-
-<section class="section contact">
-
-```
-<h2>Contact Information</h2>
-
-<p>
-    Email: your_email@gmail.com
-</p>
-
-<p>
-    GitHub:
-    <a href="https://github.com/azan823">
-        github.com/azan823
+  <div class="io-list">
+    <a class="io-row" href="mailto:your_email@gmail.com">
+      <span class="io-label">EMAIL</span>
+      <span class="io-value">your_email@gmail.com</span>
     </a>
-</p>
-
-<p>
-    LinkedIn:
-    <a href="#">
-        Your LinkedIn Profile
+    <a class="io-row" href="https://github.com/azan823" target="_blank" rel="noopener">
+      <span class="io-label">GITHUB</span>
+      <span class="io-value">github.com/azan823</span>
     </a>
-</p>
-```
-
+    <a class="io-row" href="#">
+      <span class="io-label">LINKEDIN</span>
+      <span class="io-value">Add your LinkedIn URL</span>
+    </a>
+  </div>
 </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built &amp; wired by Malik Azan Waheed.</p>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
