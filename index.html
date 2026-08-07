@@ -3,181 +3,450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Azan Waheed — Electrical &amp; ML Engineer</title>
-<meta name="description" content="Portfolio of Malik Azan Waheed, Electrical &amp; Machine Learning Engineer.">
+<title>Malik Azan Waheed — Machine Learning Engineer &amp; Electrical Engineer</title>
+<meta name="description" content="Portfolio of Malik Azan Waheed — Electrical Engineering student at NUST, Machine Learning Engineer and AI Developer building RAG apps, computer vision and embedded systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- scroll progress rail (desktop) -->
-<nav class="rail" aria-hidden="true">
-  <div class="rail-line"><div class="rail-fill" id="railFill"></div></div>
-  <ol class="rail-nodes">
-    <li data-target="hero"><span></span></li>
-    <li data-target="courses"><span></span></li>
-    <li data-target="projects"><span></span></li>
-    <li data-target="certificates"><span></span></li>
-    <li data-target="contact"><span></span></li>
-  </ol>
-</nav>
+<!-- animated background -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="particles" id="particles"></div>
+</div>
 
-<!-- mobile progress bar -->
+<!-- scroll progress bar -->
 <div class="progress-bar" aria-hidden="true"><div id="progressFill"></div></div>
+
+<!-- floating navbar -->
+<nav class="navbar" aria-label="Primary">
+  <a href="#hero" class="nav-logo">Azan<span>.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#hero" data-target="hero">Home</a>
+    <a href="#about" data-target="about">About</a>
+    <a href="#skills" data-target="skills">Skills</a>
+    <a href="#courses" data-target="courses">Courses</a>
+    <a href="#projects" data-target="projects">Projects</a>
+    <a href="#contact" data-target="contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Let's talk</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" data-target="hero">Home</a>
+  <a href="#about" data-target="about">About</a>
+  <a href="#skills" data-target="skills">Skills</a>
+  <a href="#courses" data-target="courses">Courses</a>
+  <a href="#projects" data-target="projects">Projects</a>
+  <a href="#contact" data-target="contact">Contact</a>
+</div>
 
 <!-- HERO -->
 <header class="hero" id="hero">
   <div class="hero-inner">
-    <div class="scope-frame">
-      <img src="profile.png" alt="Portrait of Malik Azan Waheed" class="profile-pic">
-      <span class="corner tl"></span><span class="corner tr"></span>
-      <span class="corner bl"></span><span class="corner br"></span>
-      <span class="scanline"></span>
+    <div class="avatar-wrap">
+      <div class="avatar-glow"></div>
+      <div class="avatar-ring">
+        <img src="profile.png" alt="Portrait of Malik Azan Waheed" class="profile-pic">
+      </div>
     </div>
 
-    <p class="datasheet-line">MODEL&nbsp;NO. MAW‑01&nbsp;&nbsp;·&nbsp;&nbsp;STATUS <span class="status-dot"></span>ACTIVE</p>
-    <h1 class="name">Malik Azan <span class="cursor">Waheed</span></h1>
-    <p class="subtitle">Electrical Engineer&ensp;/&ensp;Machine Learning &amp; Applied AI</p>
-    <p class="hero-desc">I build at the point where circuits meet models — from logic-level hardware to
-      LLM-powered applications. This page traces that signal path, start to finish.</p>
+    <p class="status-chip"><span class="status-dot"></span>Available for opportunities</p>
+
+    <h1>Malik Azan Waheed</h1>
+    <p class="hero-role"><span id="typedRole">Machine Learning Engineer</span><span class="typed-cursor" id="typedCursor">&nbsp;</span></p>
+    <p class="hero-desc">Electrical Engineering student at NUST building intelligent systems —
+      from RAG applications and computer vision to embedded hardware.</p>
 
     <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">View builds</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <a href="#projects" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        View Projects
+      </a>
+      <a href="resume.pdf" class="btn btn-secondary" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download Resume
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Contact Me
+      </a>
+    </div>
+
+    <div class="hero-socials">
+      <a class="social-icon" href="https://github.com/azan823" target="_blank" rel="noopener" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.22.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"></path></svg>
+      </a>
+      <a class="social-icon" href="https://www.linkedin.com/in/malik-azan-waheed-153434285/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg>
+      </a>
+      <a class="social-icon" href="mailto:awaheed.bee24seecs@seecs.edu.pk" aria-label="Send an email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6l-10 7L2 6"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+      </a>
     </div>
   </div>
+
+  <a href="#about" class="scroll-cue" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+  </a>
 </header>
 
 <main>
 
-<!-- COURSES / TRAINING -->
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p class="eyebrow">About</p>
+      <h2>Bridging circuits with intelligence</h2>
+      <p style="margin-top:20px;">I am an Electrical Engineering student at NUST with a strong passion
+        for Artificial Intelligence, Machine Learning, Deep Learning, and Software Development. I enjoy
+        building intelligent systems, RAG applications, computer vision solutions, and embedded systems.
+        My goal is to bridge Electrical Engineering with modern AI technologies.</p>
+      <ul class="about-highlights">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Designing RAG pipelines and LLM-powered applications</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Training and deploying machine learning models</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Building embedded systems on microcontroller hardware</li>
+      </ul>
+    </div>
+    <div class="stats-grid reveal reveal-delay-1">
+      <div class="glass stat-card"><div class="stat-num">2+</div><div class="stat-label">Years Coding</div></div>
+      <div class="glass stat-card"><div class="stat-num">10+</div><div class="stat-label">Projects Built</div></div>
+      <div class="glass stat-card"><div class="stat-num">ML</div><div class="stat-label">Machine Learning</div></div>
+      <div class="glass stat-card"><div class="stat-num">EE</div><div class="stat-label">Electrical Engineering</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-head reveal">
+    <p class="eyebrow" style="justify-content:center;">Skills</p>
+    <h2>What I work with</h2>
+    <p>Tools and technologies I use to design, train and ship AI-driven systems.</p>
+  </div>
+
+  <div class="skills-category reveal">
+    <p class="skills-category-title">Programming</p>
+    <div class="skills-grid">
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Py</div><span class="skill-name">Python</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="95"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">C++</div><span class="skill-name">C++</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">SQL</div><span class="skill-name">SQL</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">JS</div><span class="skill-name">JavaScript</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">H</div><span class="skill-name">HTML</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">C</div><span class="skill-name">CSS</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div></div>
+    </div>
+  </div>
+
+  <div class="skills-category reveal">
+    <p class="skills-category-title">Libraries &amp; Frameworks</p>
+    <div class="skills-grid">
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Np</div><span class="skill-name">NumPy</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Pd</div><span class="skill-name">Pandas</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Mp</div><span class="skill-name">Matplotlib</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Sk</div><span class="skill-name">Scikit-learn</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Pt</div><span class="skill-name">PyTorch</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Tf</div><span class="skill-name">TensorFlow</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Cv</div><span class="skill-name">OpenCV</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="72"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Lc</div><span class="skill-name">LangChain</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">St</div><span class="skill-name">Streamlit</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Fl</div><span class="skill-name">Flask</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div></div>
+    </div>
+  </div>
+
+  <div class="skills-category reveal">
+    <p class="skills-category-title">Databases &amp; Tools</p>
+    <div class="skills-grid">
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Db</div><span class="skill-name">SQLite</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Gt</div><span class="skill-name">Git</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Gh</div><span class="skill-name">GitHub</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Ar</div><span class="skill-name">Arduino</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+      <div class="glass skill-card"><div class="skill-top"><div class="skill-icon">Pr</div><span class="skill-name">Proteus</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES / TIMELINE -->
 <section class="section" id="courses">
-  <p class="eyebrow">// 01&ensp;SIGNAL INPUT — CORE TRAINING</p>
-  <h2>What went into the design</h2>
+  <div class="section-head reveal">
+    <p class="eyebrow" style="justify-content:center;">Courses</p>
+    <h2>Major coursework</h2>
+    <p>The academic foundation behind everything I build.</p>
+  </div>
 
-  <div class="grid courses-grid">
-    <article class="card">
-      <div class="card-media"><img src="dld.png" alt="Digital logic schematic in Proteus"></div>
-      <h3>Digital Logic Design</h3>
-      <p>Logic gates, flip-flops, and combinational &amp; sequential circuits — the groundwork for
-        every digital system built after it.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-media"><img src="mps.png" alt="Microprocessor schematic in Proteus"></div>
-      <h3>Microprocessor Systems</h3>
-      <p>Assembly programming, interrupts, and memory interfacing on real microcontroller
-        architecture.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-media"><img src="ml.png" alt="Machine learning concept illustration"></div>
-      <h3>Machine Learning</h3>
-      <p>Supervised &amp; unsupervised learning, model training, and the data preprocessing that
-        makes models trustworthy.</p>
-    </article>
-
-    <article class="card">
-      <div class="card-media"><img src="langchain.png" alt="Agentic AI application illustration"></div>
-      <h3>LangChain &amp; Agentic AI</h3>
-      <p>Building LLM-powered applications — prompt engineering, retrieval, and document-grounded
-        chatbots.</p>
-    </article>
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Digital Logic Design</h3><p>Logic gates, flip-flops, combinational &amp; sequential circuits.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Microprocessor Systems</h3><p>Assembly programming, interrupts, and memory interfacing.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Machine Learning</h3><p>Supervised &amp; unsupervised learning, model training and evaluation.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Data Structures</h3><p>Core structures and algorithms for efficient problem solving.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Object Oriented Programming</h3><p>Design principles for building modular, reusable software.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Signals &amp; Systems</h3><p>Time and frequency-domain analysis of continuous &amp; discrete signals.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Embedded Systems</h3><p>Firmware development and hardware-software integration.</p></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="glass timeline-card"><h3>Power Electronics</h3><p>Converters, drives, and energy conversion systems.</p></div>
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
-  <p class="eyebrow">// 02&ensp;OUTPUT STAGE — BUILDS</p>
-  <h2>Things I've shipped</h2>
+  <div class="section-head reveal">
+    <p class="eyebrow" style="justify-content:center;">Projects</p>
+    <h2>Things I've shipped</h2>
+    <p>A mix of AI applications, embedded builds, and classic software projects.</p>
+  </div>
 
-  <div class="grid projects-grid">
-    <article class="card project-card">
-      <span class="tag">LangChain · Python</span>
-      <h3>Currency Converter</h3>
-      <p>AI-powered currency converter built with LangChain and the HuggingFace API.</p>
-      <a href="https://github.com/azan823/currency-converter" target="_blank" rel="noopener">Open repository →</a>
+  <!-- Featured -->
+  <div class="glass featured-project reveal">
+    <div class="featured-media"><img src="rag-chatbot.png" alt="RAG chatbot interface"></div>
+    <div class="featured-body">
+      <span class="featured-badge">Featured Project</span>
+      <h3>RAG Chatbot</h3>
+      <p>A retrieval-augmented generation chatbot that answers questions grounded in your own
+        documents — combining semantic search with an LLM for accurate, source-backed responses.</p>
+      <div class="tag-row">
+        <span class="tech-badge">LangChain</span>
+        <span class="tech-badge">FAISS</span>
+        <span class="tech-badge">Sentence Transformers</span>
+        <span class="tech-badge">HuggingFace</span>
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">Streamlit</span>
+        <span class="tech-badge">PDF Processing</span>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/azan823/rag-chatbot" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.22.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"></path></svg>
+          GitHub
+        </a>
+        <a href="#" class="btn btn-ghost btn-sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    <article class="glass project-card reveal">
+      <div class="project-media"><img src="currency-converter.png" alt="Currency converter app screenshot"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">LangChain</span><span class="tech-badge">Python</span></div>
+        <h3>Currency Converter</h3>
+        <p>AI-powered currency converter built with LangChain and the HuggingFace API.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/currency-converter" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
     </article>
 
-    <article class="card project-card">
-      <span class="tag">RAG · LLM</span>
-      <h3>Multi-Document Research Assistant</h3>
-      <p>RAG-based chatbot that answers questions grounded in multiple source documents.</p>
-      <a href="https://github.com/azan823/research-assistant" target="_blank" rel="noopener">Open repository →</a>
+    <article class="glass project-card reveal reveal-delay-1">
+      <div class="project-media"><img src="research-assistant.png" alt="Multi-document research assistant screenshot"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">RAG</span><span class="tech-badge">LLM</span></div>
+        <h3>Multi-Document Research Assistant</h3>
+        <p>RAG-based chatbot that answers questions grounded in multiple source documents.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/research-assistant" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
     </article>
 
-    <article class="card project-card">
-      <span class="tag">C++</span>
-      <h3>Store Management System</h3>
-      <p>Console-based inventory system with user authentication and product management.</p>
-      <a href="https://github.com/azan823/store-management-system" target="_blank" rel="noopener">Open repository →</a>
+    <article class="glass project-card reveal reveal-delay-2">
+      <div class="project-media"><img src="store-management.png" alt="Store management system screenshot"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">C++</span></div>
+        <h3>Store Management System</h3>
+        <p>Console-based inventory system with user authentication and product management.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/store-management-system" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
     </article>
 
-    <article class="card project-card">
-      <span class="tag">Arduino · Sensors</span>
-      <h3>Footstep Detection Security Mat</h3>
-      <p>Arduino-based intrusion detection using piezoelectric footstep sensors.</p>
-      <a href="https://github.com/azan823/security-mat" target="_blank" rel="noopener">Open repository →</a>
+    <article class="glass project-card reveal">
+      <div class="project-media"><img src="security-mat.png" alt="Footstep detection security mat"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">Arduino</span><span class="tech-badge">Sensors</span></div>
+        <h3>Footstep Detection Security Mat</h3>
+        <p>Arduino-based intrusion detection using piezoelectric footstep sensors.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/security-mat" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="glass project-card reveal reveal-delay-1">
+      <div class="project-media"><img src="crop-yield.png" alt="Crop yield prediction dashboard"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">Machine Learning</span><span class="tech-badge">Python</span></div>
+        <h3>Crop Yield Prediction</h3>
+        <p>Regression model predicting crop yield from environmental and soil data.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/crop-yield-prediction" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="glass project-card reveal reveal-delay-2">
+      <div class="project-media"><img src="forest-cover.png" alt="Forest cover type prediction visualization"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">Machine Learning</span><span class="tech-badge">Classification</span></div>
+        <h3>Forest Cover Type Prediction</h3>
+        <p>Multi-class classifier predicting forest cover type from cartographic data.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/forest-cover-prediction" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="glass project-card reveal">
+      <div class="project-media"><img src="bike-rental.png" alt="Bike rental demand prediction chart"></div>
+      <div class="project-body">
+        <div class="tag-row"><span class="tech-badge">Machine Learning</span><span class="tech-badge">Regression</span></div>
+        <h3>Bike Rental Prediction</h3>
+        <p>Predicting hourly bike rental demand from weather and seasonal data.</p>
+        <div class="project-links">
+          <a href="https://github.com/azan823/bike-rental-prediction" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub →</a>
+        </div>
+      </div>
     </article>
   </div>
 </section>
 
-<!-- CERTIFICATES -->
-<section class="section" id="certificates">
-  <p class="eyebrow">// 03&ensp;VALIDATION — VERIFIED</p>
-  <h2>Certificates</h2>
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-head reveal">
+    <p class="eyebrow" style="justify-content:center;">Experience</p>
+    <h2>Where I've applied it</h2>
+  </div>
+  <div class="experience-grid">
+    <div class="glass experience-card reveal">
+      <div class="experience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+      <h3>Machine Learning Projects</h3>
+      <p>Hands-on model building across regression, classification and computer vision tasks.</p>
+    </div>
+    <div class="glass experience-card reveal reveal-delay-1">
+      <div class="experience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+      <h3>RAG Development</h3>
+      <p>Designing retrieval-augmented pipelines that ground LLM answers in real documents.</p>
+    </div>
+    <div class="glass experience-card reveal reveal-delay-2">
+      <div class="experience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></div>
+      <h3>Arduino Projects</h3>
+      <p>Sensor-driven builds bridging firmware, circuits, and real-world interaction.</p>
+    </div>
+    <div class="glass experience-card reveal reveal-delay-3">
+      <div class="experience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg></div>
+      <h3>Electrical Engineering Labs</h3>
+      <p>Hands-on coursework spanning digital logic, power electronics and signal processing.</p>
+    </div>
+  </div>
+</section>
 
-  <div class="grid certs-grid">
-    <article class="card cert-card">
-      <div class="card-media cert-media"><img src="cert_1.png" alt="No Code AI Build-A-Thon participation certificate"></div>
-      <h3>No Code AI Build‑A‑Thon</h3>
-      <p>Participant — Google Developers Group on Campus, NUST. March 2026.</p>
-    </article>
-
-    <article class="card cert-card">
-      <div class="card-media cert-media"><img src="cert_2.png" alt="Generative AI Application Developer certificate"></div>
-      <h3>Generative AI Application Developer</h3>
-      <p>NCEAC–HEC Generative AI Training, in collaboration with UETIANS Lahore Endowment
-        Foundation. Oct–Dec 2025.</p>
-    </article>
-
-    <article class="card cert-card">
-      <div class="card-media cert-media"><img src="cert_3.png" alt="Agentic AI workshop participation certificate"></div>
-      <h3>Agentic AI: From Idea to Deployment</h3>
-      <p>Workshop participant — Peer Bridge.</p>
-    </article>
+<!-- ACHIEVEMENTS -->
+<section class="section" id="achievements">
+  <div class="section-head reveal">
+    <p class="eyebrow" style="justify-content:center;">Achievements</p>
+    <h2>Milestones so far</h2>
+  </div>
+  <div class="achievements-grid">
+    <div class="glass achievement-card reveal">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+      <h3>NUST Electrical Engineering Student</h3>
+    </div>
+    <div class="glass achievement-card reveal reveal-delay-1">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
+      <h3>Machine Learning Projects</h3>
+    </div>
+    <div class="glass achievement-card reveal reveal-delay-2">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08A2.5 2.5 0 0 1 2 14.5v-4a2.5 2.5 0 0 1 2.08-2.46A2.5 2.5 0 0 1 6.5 4.5 2.5 2.5 0 0 1 9.5 2z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08A2.5 2.5 0 0 0 22 14.5v-4a2.5 2.5 0 0 0-2.08-2.46A2.5 2.5 0 0 0 17.5 4.5 2.5 2.5 0 0 0 14.5 2z"></path></svg></div>
+      <h3>Deep Learning</h3>
+    </div>
+    <div class="glass achievement-card reveal">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+      <h3>RAG Chatbots</h3>
+    </div>
+    <div class="glass achievement-card reveal reveal-delay-1">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path></svg></div>
+      <h3>Arduino Projects</h3>
+    </div>
+    <div class="glass achievement-card reveal reveal-delay-2">
+      <div class="achievement-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.22.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"></path></svg></div>
+      <h3>GitHub Portfolio</h3>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section contact" id="contact">
-  <p class="eyebrow">// 04&ensp;I/O — GET IN TOUCH</p>
-  <h2>Let's connect</h2>
-  <p class="hero-desc">Open to opportunities in electrical engineering, machine learning, and applied
-    AI development.</p>
+<section class="section" id="contact">
+  <div class="glass contact-card reveal">
+    <p class="eyebrow" style="justify-content:center;">Contact</p>
+    <h2>Let's build something</h2>
+    <p>Open to opportunities in electrical engineering, machine learning, and applied AI development.</p>
 
-  <div class="io-list">
-    <a class="io-row" href="mailto:your_email@gmail.com">
-      <span class="io-label">EMAIL</span>
-      <span class="io-value">your_email@gmail.com</span>
-    </a>
-    <a class="io-row" href="https://github.com/azan823" target="_blank" rel="noopener">
-      <span class="io-label">GITHUB</span>
-      <span class="io-value">github.com/azan823</span>
-    </a>
-    <a class="io-row" href="#">
-      <span class="io-label">LINKEDIN</span>
-      <span class="io-value">Add your LinkedIn URL</span>
-    </a>
+    <div class="contact-rows">
+      <a class="contact-row" href="mailto:awaheed.bee24seecs@seecs.edu.pk">
+        <div class="contact-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
+        <div><div class="contact-row-label">Email</div><div class="contact-row-value">awaheed.bee24seecs@seecs.edu.pk</div></div>
+      </a>
+      <a class="contact-row" href="https://www.linkedin.com/in/malik-azan-waheed-153434285/" target="_blank" rel="noopener">
+        <div class="contact-row-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.44v6.3zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"></path></svg></div>
+        <div><div class="contact-row-label">LinkedIn</div><div class="contact-row-value">malik-azan-waheed</div></div>
+      </a>
+      <a class="contact-row" href="https://github.com/azan823" target="_blank" rel="noopener">
+        <div class="contact-row-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.16v3.2c0 .3.22.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"></path></svg></div>
+        <div><div class="contact-row-label">GitHub</div><div class="contact-row-value">github.com/azan823</div></div>
+      </a>
+      <div class="contact-row" style="cursor:default;">
+        <div class="contact-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div><div class="contact-row-label">Location</div><div class="contact-row-value">Pakistan</div></div>
+      </div>
+    </div>
+
+    <div class="contact-actions">
+      <a href="mailto:awaheed.bee24seecs@seecs.edu.pk" class="btn btn-primary">Email Me</a>
+      <a href="https://www.linkedin.com/in/malik-azan-waheed-153434285/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+      <a href="https://github.com/azan823" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+    </div>
   </div>
 </section>
 
 </main>
 
 <footer class="footer">
-  <p>Built &amp; wired by Malik Azan Waheed.</p>
+  <p>© 2026 Malik Azan Waheed</p>
+  <p>Built with HTML, CSS, JavaScript</p>
+  <p>Made with <span class="heart">❤</span></p>
 </footer>
 
 <script src="script.js"></script>
